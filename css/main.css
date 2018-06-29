@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, p, dl, pre, table {
+  margin: 0 0 1rem; }
+
+ul, ol, blockquote {
+  margin: 0 0 1rem 2rem; }
+
+body {
+  font-family: "Exo 2", sans-serif;
+  overflow-x: hidden; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Audiowide", cursive; }
+
+header {
+  display: grid;
+  position: relative;
+  height: 100vh; }
+
+.diamond-wrapper {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.diamond {
+  background-color: #282828;
+  color: #FFFFFF;
+  height: 250px;
+  overflow: hidden;
+  text-align: center;
+  transform: rotate(45deg);
+  width: 250px; }
+
+.diamond-content {
+  display: table-cell;
+  height: inherit;
+  transform: rotate(-45deg);
+  vertical-align: middle;
+  width: inherit; }
+
+/*# sourceMappingURL=main.css.map */

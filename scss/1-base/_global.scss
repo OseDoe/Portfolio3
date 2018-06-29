@@ -1,0 +1,21 @@
+// Colors
+$black: #282828;
+$dirty-white: #F5F5F5;
+$white: #FFFFFF;
+$blue: #0087FF;
+$yellow: #FFCE00;
+
+// Typography
+$audiowide: 'Audiowide', cursive;
+$exo2: 'Exo 2', sans-serif;
+
+// General Styles
+body {
+    font-family: $exo2;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $audiowide;
+}
+

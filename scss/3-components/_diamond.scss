@@ -1,0 +1,24 @@
+.diamond-wrapper {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.diamond {
+    background-color: $black;
+    color: $white; 
+    height: 250px;
+    overflow: hidden;
+    text-align: center;
+    transform: rotate(45deg);
+    width: 250px;
+}
+
+.diamond-content {
+    display: table-cell;
+    height: inherit;
+    transform: rotate(-45deg);
+    vertical-align: middle;
+    width: inherit;
+}
