@@ -1,5 +1,11 @@
 * {
-  box-sizing: border-box; }
+  background: transparent;
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
 
 h1, h2, h3, h4, h5, h6, p, dl, pre, table {
   margin: 0 0 1rem; }
@@ -8,31 +14,85 @@ ul, ol, blockquote {
   margin: 0 0 1rem 2rem; }
 
 body {
+  color: #282828;
   font-family: "Exo 2", sans-serif;
+  font-size: .7em;
   overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Audiowide", cursive; }
 
+nav {
+  background: #282828;
+  font-size: 1.7em;
+  height: 100vh;
+  left: 0;
+  overflow-x: hidden;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  width: 0;
+  z-index: 1; }
+  nav span a {
+    color: white;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    position: absolute; }
+  nav ul {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 4em 0 0 0; }
+    nav ul li {
+      margin: 1em; }
+      nav ul li a {
+        display: block;
+        color: #FFFFFF;
+        text-decoration: none; }
+
 header {
   display: grid;
+  align-content: center;
+  height: 100vh;
   position: relative;
-  height: 100vh; }
+  text-align: center; }
+  header .triangle-down {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 80px solid #282828;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; }
+  header .jumbotron {
+    grid-area: "jumbo";
+    margin: 0 3em; }
+
+#pre-craft {
+  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  text-align: center;
+  width: 100%; }
 
 .diamond-wrapper {
-  position: absolute;
-  top: -10%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  border: 2px solid red;
+  margin: 0 auto; }
 
 .diamond {
   background-color: #282828;
   color: #FFFFFF;
-  height: 250px;
+  display: inline-block;
+  height: 300px;
   overflow: hidden;
   text-align: center;
   transform: rotate(45deg);
-  width: 250px; }
+  width: 300px; }
 
 .diamond-content {
   display: table-cell;
@@ -40,5 +100,33 @@ header {
   transform: rotate(-45deg);
   vertical-align: middle;
   width: inherit; }
+
+#craft {
+  background: url("/images/craft-bg.jpg") fixed center center no-repeat;
+  background-size: cover;
+  display: grid;
+  height: 100vh; }
+
+@media (min-width: 700px) {
+  body {
+    font-size: 1em; }
+
+  nav {
+    width: 0; }
+
+  header {
+    grid-template-columns: 1fr 2fr 1fr; }
+    header .jumbotron {
+      grid-column: 2/3;
+      margin: 0 auto; }
+
+  #pre-craft {
+    grid-template-columns: 1fr 1fr 1fr; }
+    #pre-craft .diamond-wrapper {
+      grid-column: 2/3;
+      margin: 0 auto; }
+      #pre-craft .diamond-wrapper .diamond {
+        height: 500px;
+        width: 500px; } }
 
 /*# sourceMappingURL=main.css.map */

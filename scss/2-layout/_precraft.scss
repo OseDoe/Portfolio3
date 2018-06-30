@@ -1,0 +1,32 @@
+#pre-craft {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    text-align: center;
+    width: 100%;
+}
+
+.diamond-wrapper {
+    border: 2px solid red;
+    margin: 0 auto;
+}
+
+.diamond {
+    background-color: $black;
+    color: $white; 
+    display: inline-block;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    transform: rotate(45deg);
+    width: 300px;
+}
+
+.diamond-content {
+    display: table-cell;
+    height: inherit;
+    transform: rotate(-45deg);
+    vertical-align: middle;
+    width: inherit;
+}

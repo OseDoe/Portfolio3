@@ -1,3 +1,41 @@
-// @media (min-width: 700px) {
+@media (min-width: 700px) {
+    // GENERAL STYLES
+    body {
+        font-size: 1em;
+    }
 
-// }
+
+    // NAVIGATION
+    nav {
+        width: 0; // js
+    }
+
+    // HEADER
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+
+        .jumbotron {
+            grid-column: 2/3;
+            margin: 0 auto;
+        }
+    }
+
+    // PRE-CRAFT
+    #pre-craft {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .diamond-wrapper {
+            grid-column: 2/3;
+            margin: 0 auto;
+        
+            .diamond {
+                height: 500px;
+                width: 500px;
+            }
+
+        }
+
+        
+    }
+
+}
