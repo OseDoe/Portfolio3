@@ -1,6 +1,11 @@
 header {
-    display: grid;
     align-content: center;
+    background: linear-gradient(
+        to bottom,
+        $glass-white 40%,
+        $glass-blue
+    );
+    display: grid;
     height: 100vh;
     position: relative;
     text-align: center;

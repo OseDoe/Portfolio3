@@ -1,7 +1,76 @@
 #craft {
+    // background: linear-gradient(
+    //     to bottom,
+    //     $glass-yellow 80%,
+    //     $black
+    // );
     background: url("/images/craft-bg.jpg") fixed center center no-repeat;
     background-size: cover;
     display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
     height: 100vh;
+    overflow-y: visible;
+    padding: 3em;
+
     
+    .heading-wrapper {
+        align-content: end;
+        background-color: $black;
+        // border: 3px solid $dirty-white;
+        color: $dirty-white;
+        display: grid;
+        margin: 0 auto;
+        padding: $padding-mobile;
+        text-align: end;
+        position: relative;
+    }
+
+    .heading-wrapper::before {
+        border: 3px solid $dirty-white;
+        content: '';
+        position: absolute;
+        top: -10%;
+        left: 5%;
+        height: 95%;
+        width: 105%;
+    }
+
+    .craft-icons {
+        border: 2px solid $dirty-white;
+    }
+
+    .craft-text {
+        background-color: $black;
+        color: $dirty-white;
+        margin: 0 auto;
+        padding: $padding-mobile;
+        text-align: end;
+    }
+
+    .chevron-wrapper {
+        align-self: end;
+        background-color: $dirty-white;
+        justify-self: end;
+        position: relative;
+
+        .chevron {
+            background-color: $black;
+            padding: 1em;
+
+            :first-child {
+                color: $white;
+            }
+
+            :nth-child(2) {
+                color: $blue;
+            }
+
+            :last-child {
+                color: $yellow;
+            }
+        }
+    }
+
 }
