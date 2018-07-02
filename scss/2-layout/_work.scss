@@ -1,5 +1,44 @@
 #work {
     background-color: $black;
+    clip-path: polygon(0 8vw, 100% 0, 100% 92vh, 0 100%);
     color: $dirty-white;
+    display: grid;
+    grid-template-columns: 1fr;
     height: 100vh;
+    margin-top: -8vw;
+
+    .heading-wrapper {
+        padding-top: 15vh;
+        grid-column: 1/2;
+        z-index: 4;
+
+        .projects {
+
+            img {
+
+            }
+        }
+    }
 }
+
+// #work:before {
+//     background: $black;
+//     content: '';
+//     clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+//     position: absolute;
+//     top: -100px;
+//     height: 100px;
+//     width: 100%;
+//     z-index: 1;
+// }
+
+// #work:after {
+//     background: red;
+//     content: '';
+//     clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+//     position: absolute;
+//     bottom: -100px;
+//     height: 100px;
+//     width: 100%;
+//     z-index: 1;
+// }    

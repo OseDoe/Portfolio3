@@ -26,11 +26,13 @@
 
         .diamond-wrapper {
             grid-column: 2/3;
+            align-self: start;
             margin: 0 auto;
+            padding: 3em;
         
             .diamond {
-                height: 400px;
-                width: 400px;
+                height: 410px;
+                width: 410px;
             }
         }
     }
@@ -58,12 +60,24 @@
         .craft-text {
             grid-row: 3/4;
             grid-column: 1/2;
+            align-self: start;
             padding: $padding-desktop;
         }
     
         .chevron-wrapper {
             grid-column: 2/3;
             grid-row: 3/4;
+        }
+    }
+
+    // WORK
+    #work {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 5fr;
+        
+        .heading-wrapper {
+            grid-column: 4/5;
+            
         }
     }
 }

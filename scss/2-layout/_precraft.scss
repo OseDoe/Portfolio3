@@ -20,12 +20,12 @@
     background-color: $black;
     color: $white; 
     display: inline-block;
-    height: 250px;
+    height: 350px;
     margin: 0 auto;
     position: relative;
     text-align: center;
     transform: rotate(45deg);
-    width: 250px;
+    width: 350px;
 }
 
 .diamond::before {
@@ -40,6 +40,7 @@
 
 .diamond-content {
     display: table-cell;
+    font-size: .8em;
     height: inherit;
     transform: rotate(-45deg);
     vertical-align: middle;

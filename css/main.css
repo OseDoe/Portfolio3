@@ -16,7 +16,7 @@ ul, ol, blockquote {
 body {
   color: #282828;
   font-family: "Exo 2", sans-serif;
-  font-size: .7em;
+  font-size: 1em;
   overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,12 +89,12 @@ header {
   background-color: #282828;
   color: white;
   display: inline-block;
-  height: 250px;
+  height: 350px;
   margin: 0 auto;
   position: relative;
   text-align: center;
   transform: rotate(45deg);
-  width: 250px; }
+  width: 350px; }
 
 .diamond::before {
   border: 3px solid #282828;
@@ -107,6 +107,7 @@ header {
 
 .diamond-content {
   display: table-cell;
+  font-size: .8em;
   height: inherit;
   transform: rotate(-45deg);
   vertical-align: middle;
@@ -115,13 +116,14 @@ header {
 #craft {
   background: url("/images/craft-bg.jpg") fixed center center no-repeat;
   background-size: cover;
+  box-sizing: content-box;
   display: grid;
   grid-gap: 1em;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 5fr 1fr;
   height: 100vh;
   overflow-y: visible;
-  padding: 3em; }
+  padding-bottom: 4em; }
   #craft .heading-wrapper {
     align-content: end;
     background-color: #282828;
@@ -142,19 +144,25 @@ header {
   #craft .craft-icons {
     border: 2px solid whitesmoke; }
   #craft .craft-text {
+    align-self: start;
     background-color: #282828;
     color: whitesmoke;
+    font-size: 1em;
     margin: 0 auto;
     padding: 1em 1em 2em 2em;
-    text-align: end; }
+    text-align: end;
+    z-index: 2; }
   #craft .chevron-wrapper {
-    align-self: end;
+    align-self: center;
     background-color: whitesmoke;
     justify-self: end;
-    position: relative; }
+    position: relative;
+    z-index: 2; }
     #craft .chevron-wrapper .chevron {
       background-color: #282828;
-      padding: 1em; }
+      border: 3px solid whitesmoke;
+      padding: 1em;
+      height: 90%; }
       #craft .chevron-wrapper .chevron :first-child {
         color: white; }
       #craft .chevron-wrapper .chevron :nth-child(2) {
@@ -164,8 +172,16 @@ header {
 
 #work {
   background-color: #282828;
+  clip-path: polygon(0 8vw, 100% 0, 100% 92vh, 0 100%);
   color: whitesmoke;
-  height: 100vh; }
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  margin-top: -8vw; }
+  #work .heading-wrapper {
+    padding-top: 15vh;
+    grid-column: 1/2;
+    z-index: 4; }
 
 @media (min-width: 700px) {
   body {
@@ -184,10 +200,12 @@ header {
     grid-template-columns: 1fr 1fr 1fr; }
     #pre-craft .diamond-wrapper {
       grid-column: 2/3;
-      margin: 0 auto; }
+      align-self: start;
+      margin: 0 auto;
+      padding: 3em; }
       #pre-craft .diamond-wrapper .diamond {
-        height: 400px;
-        width: 400px; }
+        height: 410px;
+        width: 410px; }
 
   #craft {
     grid-gap: 4em;
@@ -206,9 +224,16 @@ header {
     #craft .craft-text {
       grid-row: 3/4;
       grid-column: 1/2;
+      align-self: start;
       padding: 2em 2em 4em 4em; }
     #craft .chevron-wrapper {
       grid-column: 2/3;
-      grid-row: 3/4; } }
+      grid-row: 3/4; }
+
+  #work {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr; }
+    #work .heading-wrapper {
+      grid-column: 4/5; } }
 
 /*# sourceMappingURL=main.css.map */
