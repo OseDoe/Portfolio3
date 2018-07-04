@@ -1,44 +1,42 @@
 #work {
     background-color: $black;
-    clip-path: polygon(0 8vw, 100% 0, 100% 92vh, 0 100%);
+    clip-path: polygon(0 10vh, 100% 0, 100% calc(100% - 10vh), 0 100%);
     color: $dirty-white;
     display: grid;
     grid-template-columns: 1fr;
-    height: 100vh;
-    margin-top: -8vw;
+    min-height: 100%;
+    margin-top: -100px;
 
     .heading-wrapper {
-        padding-top: 15vh;
         grid-column: 1/2;
+        margin-top: 8em;
+        padding: 2em;
+        text-align: left;
         z-index: 4;
+    }
 
-        .projects {
-
-            img {
-
-            }
+    .projects {
+        justify-self: center;
+        height: 80%;
+        
+        img {
+            height: 100%;
+            justify-self: stretch;    
         }
     }
 }
+/*
+01000111
+64 4 2 1 - 71
+71 - 65 = 6 = G
 
-// #work:before {
-//     background: $black;
-//     content: '';
-//     clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
-//     position: absolute;
-//     top: -100px;
-//     height: 100px;
-//     width: 100%;
-//     z-index: 1;
-// }
+01100101
+64 32 4 1 - 101
 
-// #work:after {
-//     background: red;
-//     content: '';
-//     clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
-//     position: absolute;
-//     bottom: -100px;
-//     height: 100px;
-//     width: 100%;
-//     z-index: 1;
-// }    
+01100101
+64 32 4 1 - 101
+
+01101011
+
+
+*/

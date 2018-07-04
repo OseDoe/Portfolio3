@@ -7,12 +7,14 @@
     );
     display: grid;
     grid-template-columns: 1fr;
-    height: 100vh;
+    height: 100%;
     text-align: center;
-    width: 100%;
+    width: auto;
 }
 
 .diamond-wrapper {
+    border: 3px solid red;
+    min-height: 600px;
     margin: 0 auto;
 }
 
@@ -20,12 +22,12 @@
     background-color: $black;
     color: $white; 
     display: inline-block;
-    height: 350px;
+    height: 300px;
     margin: 0 auto;
     position: relative;
     text-align: center;
     transform: rotate(45deg);
-    width: 350px;
+    width: 300px;
 }
 
 .diamond::before {
@@ -40,7 +42,7 @@
 
 .diamond-content {
     display: table-cell;
-    font-size: .8em;
+    font-size: .7em;
     height: inherit;
     transform: rotate(-45deg);
     vertical-align: middle;
