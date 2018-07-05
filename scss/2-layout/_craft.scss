@@ -12,7 +12,18 @@
     padding: 15vh 0.5em;
 
     .craft-icons {
-        border: 2px solid $dirty-white;
+        border: 3px solid $dirty-white;
+        color: $dirty-white;
+        display: grid;
+        grid-gap: 2em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1.5em;
+        place-self: center;
+        text-shadow: 2px 2px 2px $black;
+
+        i {
+            font-size: 4em;
+        }
     }
 
     .chevron-wrapper {

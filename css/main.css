@@ -127,7 +127,16 @@ header {
   overflow-y: visible;
   padding: 15vh 0.5em; }
   #craft .craft-icons {
-    border: 2px solid whitesmoke; }
+    border: 3px solid whitesmoke;
+    color: whitesmoke;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1.5em;
+    place-self: center;
+    text-shadow: 2px 2px 2px #282828; }
+    #craft .craft-icons i {
+      font-size: 4em; }
   #craft .chevron-wrapper {
     align-self: center;
     background-color: whitesmoke;
@@ -192,16 +201,54 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 1fr 4fr;
   padding-top: 8vh; }
+  #about .heading-wrapper {
+    padding-bottom: 3em; }
   #about .profile-wrapper {
-    background-color: #282828;
-    transform: rotate(5deg);
-    width: inherit; }
+    place-self: center;
+    position: relative;
+    height: 260px;
+    width: 260px;
+    z-index: 2; }
     #about .profile-wrapper img {
       border: 3px solid whitesmoke;
-      transform: rotate(-5deg); }
+      width: 100%;
+      height: auto;
+      overflow-y: hidden; }
+  #about .profile-wrapper::before {
+    background: #282828;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 120%;
+    width: 120%;
+    transform: translate(-50%, -50%) rotate(5deg);
+    z-index: -1; }
+  #about .about-icons {
+    background-color: #282828;
+    color: whitesmoke;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1.5em;
+    place-self: center; }
+    #about .about-icons a {
+      color: inherit;
+      font-size: 4em;
+      place-self: center; }
+
+footer {
+  background-color: #282828;
+  color: whitesmoke;
+  display: grid;
+  height: 10vh; }
+  footer p {
+    font-family: "Audiowide", cursive;
+    place-self: center; }
 
 @media (min-width: 700px) {
   body {
+    box-sizing: border-box;
     font-size: 1em; }
 
   nav {
@@ -234,8 +281,6 @@ header {
       grid-row: 1/2;
       padding: 2em 2em 4em 4em; }
     #craft .craft-icons {
-      border: 2px solid whitesmoke;
-      place-self: center;
       grid-column: 2/3;
       grid-row: 2/3; }
     #craft .content-wrapper {
@@ -276,7 +321,6 @@ header {
       grid-column: 1/2;
       grid-row: 1/3;
       margin: 0 auto;
-      padding: 2em;
       place-self: center; }
     #about .about-icons {
       grid-column: 1/2;
