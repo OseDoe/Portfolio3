@@ -108,7 +108,7 @@ header {
 
 .diamond-content {
   display: table-cell;
-  font-size: .7em;
+  font-size: .85em;
   height: inherit;
   transform: rotate(-45deg);
   vertical-align: middle;
@@ -269,6 +269,8 @@ footer {
       #pre-craft .diamond-wrapper .diamond {
         height: 410px;
         width: 410px; }
+      #pre-craft .diamond-wrapper .diamond-content {
+        font-size: .85em; }
 
   #craft {
     grid-gap: 4em;
