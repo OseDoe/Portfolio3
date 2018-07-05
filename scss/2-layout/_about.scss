@@ -1,0 +1,19 @@
+#about {
+    background: linear-gradient(to bottom, $glass-white 25%, $glass-blue 50%, $glass-yellow);
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr 4fr;
+    padding-top: 8vh;
+
+    .profile-wrapper {
+        background-color: $black;
+        transform: rotate(5deg);
+        width: inherit;
+
+        img {
+            border: 3px solid $dirty-white;
+            transform: rotate(-5deg);
+        }
+    }
+}

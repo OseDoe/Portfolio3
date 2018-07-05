@@ -1,10 +1,6 @@
 #pre-craft {
     align-content: center;
-    background: linear-gradient(
-        to bottom,
-        $glass-blue 30%,
-        $glass-yellow
-    );
+    background: linear-gradient(to bottom, $glass-blue 30%, $glass-yellow);
     display: grid;
     grid-template-columns: 1fr;
     height: 100%;
@@ -13,14 +9,13 @@
 }
 
 .diamond-wrapper {
-    border: 3px solid red;
     min-height: 600px;
     margin: 0 auto;
 }
 
 .diamond {
     background-color: $black;
-    color: $white; 
+    color: $white;
     display: inline-block;
     height: 300px;
     margin: 0 auto;

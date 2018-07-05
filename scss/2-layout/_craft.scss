@@ -1,11 +1,7 @@
 #craft {
-    // background: linear-gradient(
-    //     to bottom,
-    //     $glass-yellow 80%,
-    //     $black
-    // );
     background: url("/images/craft-bg.jpg") fixed center center no-repeat;
     background-size: cover;
+    border-top: 3px solid $black;
     box-sizing: content-box;
     display: grid;
     grid-gap: 1em;
@@ -13,45 +9,10 @@
     grid-template-rows: 1fr 1fr 5fr 1fr;
     height: 100%;
     overflow-y: visible;
-    padding: 2em 0.5em 4em;
-
-    .heading-wrapper {
-        align-content: end;
-        background-color: $black;
-
-        // border: 3px solid $dirty-white;
-        color: $dirty-white;
-        display: grid;
-        margin: 0 auto;
-        padding: $padding-mobile;
-        text-align: end;
-        position: relative;
-    }
-
-    .heading-wrapper::before {
-        border: 3px solid $dirty-white;
-        content: '';
-        position: absolute;
-        top: -10%;
-        left: 5%;
-        height: 95%;
-        width: 105%;
-    }
+    padding: 15vh 0.5em;
 
     .craft-icons {
         border: 2px solid $dirty-white;
-    }
-
-    .craft-text {
-        place-self: center;
-        background-color: $black;
-        border: 3px solid $dirty-white;
-        color: $dirty-white;
-        font-size: 1em;
-        margin: 0 auto;
-        padding: $padding-mobile;
-        text-align: end;
-        z-index: 2;
     }
 
     .chevron-wrapper {

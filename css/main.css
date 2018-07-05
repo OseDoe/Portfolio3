@@ -83,7 +83,6 @@ header {
   width: auto; }
 
 .diamond-wrapper {
-  border: 3px solid red;
   min-height: 600px;
   margin: 0 auto; }
 
@@ -118,6 +117,7 @@ header {
 #craft {
   background: url("/images/craft-bg.jpg") fixed center center no-repeat;
   background-size: cover;
+  border-top: 3px solid #282828;
   box-sizing: content-box;
   display: grid;
   grid-gap: 1em;
@@ -125,36 +125,9 @@ header {
   grid-template-rows: 1fr 1fr 5fr 1fr;
   height: 100%;
   overflow-y: visible;
-  padding: 2em 0.5em 4em; }
-  #craft .heading-wrapper {
-    align-content: end;
-    background-color: #282828;
-    color: whitesmoke;
-    display: grid;
-    margin: 0 auto;
-    padding: 1em 1em 2em 2em;
-    text-align: end;
-    position: relative; }
-  #craft .heading-wrapper::before {
-    border: 3px solid whitesmoke;
-    content: '';
-    position: absolute;
-    top: -10%;
-    left: 5%;
-    height: 95%;
-    width: 105%; }
+  padding: 15vh 0.5em; }
   #craft .craft-icons {
     border: 2px solid whitesmoke; }
-  #craft .craft-text {
-    place-self: center;
-    background-color: #282828;
-    border: 3px solid whitesmoke;
-    color: whitesmoke;
-    font-size: 1em;
-    margin: 0 auto;
-    padding: 1em 1em 2em 2em;
-    text-align: end;
-    z-index: 2; }
   #craft .chevron-wrapper {
     align-self: center;
     background-color: whitesmoke;
@@ -174,40 +147,59 @@ header {
 
 #work {
   background-color: #282828;
-  clip-path: polygon(0 10vh, 100% 0, 100% calc(100% - 10vh), 0 100%);
   color: whitesmoke;
   display: grid;
   grid-template-columns: 1fr;
   min-height: 100%;
-  margin-top: -100px; }
+  position: relative; }
   #work .heading-wrapper {
     grid-column: 1/2;
-    margin-top: 8em;
     padding: 2em;
-    text-align: left;
-    z-index: 4; }
+    text-align: center; }
   #work .projects {
-    justify-self: center;
-    height: 80%; }
+    padding-bottom: 2em;
+    place-self: center; }
     #work .projects img {
+      border: 3px solid whitesmoke;
       height: 100%;
-      justify-self: stretch; }
+      max-width: 100%;
+      place-self: stretch; }
 
-/*
-01000111
-64 4 2 1 - 71
-71 - 65 = 6 = G
+#work::before {
+  background-color: #282828;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+  content: '';
+  height: 8vh;
+  width: 100%;
+  position: absolute;
+  top: -8vh;
+  left: 0; }
 
-01100101
-64 32 4 1 - 101
+#work::after {
+  background-color: #282828;
+  clip-path: polygon(0 0, 100% 0, 100% 5%, 0 100%);
+  content: '';
+  height: 8vh;
+  width: 100%;
+  position: absolute;
+  bottom: -8vh;
+  left: 0; }
 
-01100101
-64 32 4 1 - 101
+#about {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 25%, rgba(0, 135, 255, 0.2) 50%, rgba(255, 206, 0, 0.2));
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr 4fr;
+  padding-top: 8vh; }
+  #about .profile-wrapper {
+    background-color: #282828;
+    transform: rotate(5deg);
+    width: inherit; }
+    #about .profile-wrapper img {
+      border: 3px solid whitesmoke;
+      transform: rotate(-5deg); }
 
-01101011
-
-
-*/
 @media (min-width: 700px) {
   body {
     font-size: 1em; }
@@ -235,21 +227,21 @@ header {
     grid-gap: 4em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 3fr;
-    padding: 3em; }
+    padding: 3em;
+    max-height: 100vh; }
     #craft .heading-wrapper {
       grid-column: 1/2;
       grid-row: 1/2;
       padding: 2em 2em 4em 4em; }
     #craft .craft-icons {
-      justify-self: center;
       border: 2px solid whitesmoke;
+      place-self: center;
       grid-column: 2/3;
       grid-row: 2/3; }
-    #craft .craft-text {
-      align-self: start;
+    #craft .content-wrapper {
       grid-row: 3/4;
       grid-column: 1/2;
-      align-self: start;
+      place-self: center;
       padding: 2em 2em 4em 4em; }
     #craft .chevron-wrapper {
       grid-column: 2/3;
@@ -260,13 +252,76 @@ header {
     grid-template-rows: 1fr 5fr;
     grid-gap: 0; }
     #work .heading-wrapper {
-      grid-column: 1/5;
+      grid-column: 4/5;
       grid-row: 1/2;
-      text-align: right; }
+      text-align: right;
+      padding-top: 1em; }
     #work .projects {
       justify-self: stretch;
-      min-height: 600px; }
+      grid-row: 2 / 3; }
       #work .projects img {
-        max-width: 100%; } }
+        max-width: 100%; }
+
+  #about {
+    grid-gap: 4em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 12vh 3em 3em 3em;
+    padding-top: 12vh; }
+    #about .heading-wrapper {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      place-self: center; }
+    #about .profile-wrapper {
+      grid-column: 1/2;
+      grid-row: 1/3;
+      margin: 0 auto;
+      padding: 2em;
+      place-self: center; }
+    #about .about-icons {
+      grid-column: 1/2;
+      grid-row: 3/4; }
+    #about .content-wrapper {
+      grid-column: 2/3;
+      grid-row: 2/4;
+      place-self: center; } }
+.content-wrapper {
+  background-color: #282828;
+  border: 3px solid whitesmoke;
+  color: whitesmoke;
+  font-size: 1em;
+  padding: 1em 1em 2em 2em;
+  place-self: center;
+  text-align: end;
+  z-index: 2; }
+
+.heading-wrapper {
+  align-content: end;
+  background-color: #282828;
+  border: 3px solid #ffce00;
+  color: white;
+  display: grid;
+  margin: 1em;
+  padding: 1em 1em 2em 2em;
+  place-self: center;
+  text-align: end;
+  position: relative; }
+
+.heading-wrapper::before {
+  border: 3px solid whitesmoke;
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  height: 95%;
+  width: 105%; }
+
+.heading-wrapper::after {
+  border-bottom: 3px solid #0087ff;
+  content: '';
+  position: absolute;
+  bottom: 30%;
+  right: -8%;
+  width: 95%; }
 
 /*# sourceMappingURL=main.css.map */
